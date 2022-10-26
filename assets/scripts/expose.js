@@ -4,11 +4,10 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
     
-    // set correct image
+    // Implement images
     const horn_select = document.getElementById('horn-select');
     horn_select.addEventListener('change', function(){
         if (horn_select.value == 'air-horn'){
-            // if (document.querySelector('img')){ console.log('worked');}
             document.querySelector('img').src = 'assets/images/air-horn.svg';
             document.querySelector('audio').src = 'assets/audio/air-horn.mp3';
         }
@@ -29,4 +28,5 @@ function init() {
     })
 
     // implement volume controls
+    const volume = document.getElementById('volume');
 }
