@@ -7,6 +7,7 @@ function init() {
     const voice_select = document.getElementById('voice-select');
     const text = document.getElementById('text-to-speak');
     const button = document.querySelector('button');
+    const image = document.querySelector('img');
 
     // need timer to give time for voice list to populate after loading
     setTimeout(function(){
@@ -28,7 +29,17 @@ function init() {
             synth.speak(say_this);
         })
 
-        
+        // implement mouth movement
+        setInterval(function(){
+            if (synth.speaking){
+                image.src = 'assets/images/smiling-open.png';
+            }
+            else{
+                image.src = 'assets/images/smiling.png';
+            }
+        }, 1)
+
+
     }, 50);
     
 }
